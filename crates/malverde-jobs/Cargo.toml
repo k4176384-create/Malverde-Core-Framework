@@ -1,0 +1,21 @@
+[package]
+name = "malverde-jobs"
+version = "0.1.0"
+edition = "2021"
+description = "Job execution and checkpointing system for Malverde Framework"
+
+[dependencies]
+malverde-core = { path = "../malverde-core" }
+malverde-storage = { path = "../malverde-storage" }
+malverde-events = { path = "../malverde-events" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+thiserror = { workspace = true }
+log = { workspace = true }
+uuid = { workspace = true }
+chrono = { workspace = true }
+
+[dev-dependencies]
+mockall = { workspace = true }
+tempfile = { workspace = true }

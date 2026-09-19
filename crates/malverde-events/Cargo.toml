@@ -1,0 +1,17 @@
+[package]
+name = "malverde-events"
+version = "0.1.0"
+edition = "2021"
+description = "Structured event system for Malverde Framework"
+
+[dependencies]
+malverde-core = { path = "../malverde-core" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+chrono = { workspace = true }
+uuid = { workspace = true }
+sha2 = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+mockall = { workspace = true }

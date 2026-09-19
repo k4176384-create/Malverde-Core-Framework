@@ -1,0 +1,16 @@
+[package]
+name = "malverde-config"
+version = "0.1.0"
+edition = "2021"
+description = "Configuration management for Malverde Framework"
+
+[dependencies]
+malverde-core = { path = "../malverde-core" }
+malverde-storage = { path = "../malverde-storage" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+log = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }

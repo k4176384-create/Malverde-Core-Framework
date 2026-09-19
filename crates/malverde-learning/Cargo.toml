@@ -1,0 +1,23 @@
+[package]
+name = "malverde-learning"
+version = "0.1.0"
+edition = "2021"
+authors = ["Malverde Team"]
+description = "Learning system for the Malverde Framework"
+license = "MIT"
+
+[dependencies]
+malverde-core = { path = "../malverde-core" }
+malverde-storage = { path = "../malverde-storage" }
+malverde-events = { path = "../malverde-events" }
+malverde-audit = { path = "../malverde-audit" }
+
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.0", features = ["v4", "serde"] }
+sha2 = "0.10"
+log = "0.4"
+
+[dev-dependencies]
