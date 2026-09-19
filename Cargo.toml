@@ -1,0 +1,43 @@
+[workspace]
+members = [
+    "crates/malverde-core",
+    "crates/malverde-bus",
+    "crates/malverde-storage",
+    "crates/malverde-events",
+    "crates/malverde-jobs",
+    "crates/malverde-config",
+    "crates/malverde-audit",
+    "crates/malverde-learning",
+    "crates/malverde-plugin-manager",
+    "crates/malverde-runtime",
+    "crates/malverde-tui",
+    "crates/malverde-cli",
+]
+resolver = "2"
+
+[workspace.dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
+uuid = { version = "1.0", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+strum = { version = "0.25", features = ["derive"] }
+enum-iterator = "1.4"
+rusqlite = { version = "0.30", features = ["bundled", "chrono"] }
+tokio = { version = "1.0", features = ["full"] }
+clap = { version = "4.0", features = ["derive"] }
+ratatui = "0.25"
+crossterm = "0.27"
+log = "0.4"
+env_logger = "0.10"
+sha2 = "0.10"
+libloading = "0.8"
+mockall = "0.12"
+tempfile = "3.8"
+
+[profile.release]
+opt-level = 2
+lto = "thin"
+codegen-units = 1
+panic = "abort"
+strip = true
